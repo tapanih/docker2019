@@ -1,0 +1,18 @@
+tapani@tapani-VM:~/docker-hy/part1/exercise-06$ docker build -t docker-clock .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM devopsdockeruh/overwrite_cmd_exercise
+ ---> 0f7f459b76c9
+Step 2/2 : CMD ["-c"]
+ ---> Using cache
+ ---> 7473500151ce
+Successfully built 7473500151ce
+Successfully tagged docker-clock:latest
+tapani@tapani-VM:~/docker-hy/part1/exercise-06$ docker run -it docker-clock
+1
+2
+3
+4
+5
+^C
+
+
