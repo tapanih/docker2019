@@ -137,3 +137,26 @@ CMD ["npx", "serve", "-s", "-l", "5000", "dist"]
 
 EXPOSE 5000
 ```
+
+## Exercise 1.11
+
+[Dockerfile](dockerfiles/exercise-11/Dockerfile)
+```Dockerfile
+FROM ubuntu:16.04
+WORKDIR /backend
+
+RUN apt-get update && apt-get install -y curl
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
+RUN apt-get install -y nodejs
+
+COPY . .
+RUN npm install
+CMD ["npm", "start"]
+
+EXPOSE 8000
+```
+Commands used:
+```
+docker build -t backend .
+docker run --rm -p 8000:8000 -v $(pwd)/logs.txt:/backend/logs.txt backend
+```
