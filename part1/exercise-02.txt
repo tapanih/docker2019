@@ -1,5 +1,0 @@
-tapani@tapani-VM:~/docker-hy/part1$ docker ps -a
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-tapani@tapani-VM:~/docker-hy/part1$ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-tapani@tapani-VM:~/docker-hy/part1$ 
