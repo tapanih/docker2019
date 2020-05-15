@@ -206,3 +206,16 @@ $ docker build -t backend .
 $ docker run -d -p 5000:5000 frontend
 $ docker run -d -p 8000:8000 backend
 ```
+## Exercise 1.13
+
+[Dockerfile](dockerfiles/exercise-13/Dockerfile)
+```Dockerfile
+FROM openjdk:8
+WORKDIR /spring-example
+
+COPY . .
+RUN ./mvnw package
+CMD ["java", "-jar", "./target/docker-example-1.1.3.jar"]
+
+EXPOSE 8080
+```
