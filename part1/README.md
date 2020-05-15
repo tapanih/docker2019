@@ -160,3 +160,49 @@ Commands used:
 docker build -t backend .
 docker run --rm -p 8000:8000 -v $(pwd)/logs.txt:/backend/logs.txt backend
 ```
+
+# Exercise 1.12
+
+[Frontend Dockerfile](dockerfiles/exercise-12/frontend/Dockerfile)
+```Dockerfile
+FROM ubuntu:16.04
+WORKDIR /frontend
+
+RUN apt-get update && apt-get install -y curl
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
+RUN apt-get install -y nodejs
+
+ENV API_URL=http://localhost:8000
+
+COPY . .
+RUN npm install
+RUN npm run build
+CMD ["npx", "serve", "-s", "-l", "5000", "dist"]
+
+EXPOSE 5000
+```
+[Backend Dockerfile](dockerfiles/exercise-12/backend/Dockerfile)
+```Dockerfile
+FROM ubuntu:16.04
+WORKDIR /backend
+
+RUN apt-get update && apt-get install -y curl
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
+RUN apt-get install -y nodejs
+
+ENV FRONT_URL=http://localhost:5000
+
+COPY . .
+RUN npm install
+CMD ["npm", "start"]
+
+EXPOSE 8000
+```
+
+Commands used:
+```
+$ docker build -t frontend .
+$ docker build -t backend .
+$ docker run -d -p 5000:5000 frontend
+$ docker run -d -p 8000:8000 backend
+```
