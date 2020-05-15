@@ -108,12 +108,13 @@ Searching..
 
 ## Exercise 1.8
 
-[logs.txt](output/exercise-08/logs.txt)
-
+After creating an empty file locally, I ran the command:
 ```
 docker run -v $(pwd)/part1/output/exercise-08/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
 ```
 
+## Exercise 1.9
 
-
-
+```
+docker run --rm -p 80:80 devopsdockeruh/ports_exercise
+```
