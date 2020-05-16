@@ -11,3 +11,9 @@
 ## Exercise 2.3
 
 [docker-compose.yml](files/exercise-03/docker-compose.yml)
+
+## Exercise 2.4
+
+```
+docker-compose up  --scale compute=2
+```
