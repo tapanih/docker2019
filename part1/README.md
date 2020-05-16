@@ -271,3 +271,7 @@ Run command
 docker run -p 5000:5000 tapanih/social-news-site
 ```
 and the application should be running at http://127.0.0.1:5000/
+
+## Exercise 1.16
+
+[Heroku](http://docker2020.herokuapp.com/)
