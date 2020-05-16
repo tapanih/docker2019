@@ -246,3 +246,28 @@ CMD ["rails", "s", "-e", "production"]
 
 EXPOSE 3000
 ```
+
+## Exercise 1.15
+
+[Docker Hub](https://hub.docker.com/repository/docker/tapanih/social-news-site)
+
+[Dockerfile](dockerfiles/exercise-15/Dockerfile)
+```Dockerfile
+FROM python:3.8
+WORKDIR /social-news-site
+
+COPY ./requirements.txt ./
+RUN pip install -r requirements.txt
+
+COPY . .
+ENTRYPOINT ["python"]
+CMD ["run.py"]
+
+EXPOSE 5000
+```
+### Instructions
+Run command
+```
+docker run -p 5000:5000 tapanih/social-news-site
+```
+and the application should be running at http://127.0.0.1:5000/
