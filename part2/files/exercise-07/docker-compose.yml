@@ -1,0 +1,28 @@
+version: '3.5'
+
+services:
+  frontend:
+    image: ml-frontend
+    build: ./frontend
+    ports:
+      - 3000:3000
+    container_name: frontend
+  backend:
+    image: ml-backend
+    build: ./backend
+    ports:
+      - 5000:5000
+    container_name: backend
+    volumes:
+      - model:/src/model
+  training:
+    image: ml-training
+    build: ./training
+    container_name: training
+    volumes:
+      - imgs:/src/imgs
+      - model:/src/model
+
+volumes:
+  imgs:
+  model:
