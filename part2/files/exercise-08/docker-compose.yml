@@ -1,0 +1,44 @@
+version: '3.5'
+
+services:
+  nginx:
+    image: jwilder/nginx-proxy
+    ports:
+      - 80:80
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf
+
+  redis:
+    image: redis
+    container_name: redis
+
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD=example
+    container_name: db
+
+  backend:
+    image: backend
+    ports:
+      - 8000:8000
+    environment:
+      - REDIS=redis
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=example
+      - DB_HOST=db
+    volumes:
+      - ./logs.txt:/backend/logs.txt
+    depends_on:
+      - db
+    container_name: backend
+  
+  frontend:
+    image: frontend
+    ports:
+      - 5000:5000      
+    environment:
+      - API_URL=/api
+    container_name: frontend
