@@ -37,3 +37,13 @@ docker-compose up  --scale compute=2
 ## Exercise 2.9
 
 [docker-compose.yml](files/exercise-09/docker-compose.yml)
+
+## Exercise 2.10
+
+Environment variables `API_URL` and `FRONT_URL` don't need to be set anymore so Dockerfiles from exercises 1.10 and 1.11 can be used again.
+
+[docker-compose.yml](files/exercise-09/docker-compose.yml)
+
+[Frontend Dockerfile](../part1/dockerfiles/exercise-10/Dockerfile)
+
+[Backend Dockerfile](../part1/dockerfiles/exercise-11/Dockerfile)
