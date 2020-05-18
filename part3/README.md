@@ -10,6 +10,12 @@ Original backend image is 336MB and optimized version is 308MB.
 
 [Backend Dockerfile](exercise-01/backend/Dockerfile)
 
+## Exercise 3.2
 
+## Exercise 3.3
 
+## Exercise 3.4
 
+[Frontend Dockerfile](exercise-04/frontend/Dockerfile)
+
+[Backend Dockerfile](exercise-04/backend/Dockerfile)
