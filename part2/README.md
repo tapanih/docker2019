@@ -33,3 +33,7 @@ docker-compose up  --scale compute=2
 ## Exercise 2.8
 
 [docker-compose.yml](files/exercise-08/docker-compose.yml)
+
+## Exercise 2.9
+
+[docker-compose.yml](files/exercise-09/docker-compose.yml)
