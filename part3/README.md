@@ -12,6 +12,14 @@ Original backend image is 336MB and the optimized version is 308MB.
 
 ## Exercise 3.2
 
+Created a deployment pipeline to Heroku using Github Actions for the repository here: https://github.com/tapanih/social-news-site
+
+Relevant files:
+
+[Dockerfile](exercise-02/Dockerfile)
+
+[workflow.yml](exercise-02/workflow.yml)
+
 ## Exercise 3.3
 
 ## Exercise 3.4
