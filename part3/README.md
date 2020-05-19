@@ -35,3 +35,11 @@ Original backend image is 336MB and the optimized version is 117MB.
 Original frontend image is 332MB and the optimized version is 86.5M.
 
 [Frontend Dockerfile](exercise-06/Dockerfile)
+
+## Exercise 3.7
+
+Original image was 976MB and the optimized version is 275MB.
+
+[Original Dockerfile](../part1/dockerfiles/exercise-15/Dockerfile)
+
+[Optimized Dockerfile](exercise-07/Dockerfile)
