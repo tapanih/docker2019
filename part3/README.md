@@ -22,6 +22,15 @@ Relevant files:
 
 ## Exercise 3.3
 
+[builder.sh](exercise-03/builder.sh)
+
+[Dockerfile](exercise-03/Dockerfile)
+
+Run with:
+```
+sudo docker run -it -v /var/run/docker.sock:/var/run/docker.sock builder
+```
+
 ## Exercise 3.4
 
 [Frontend Dockerfile](exercise-04/frontend/Dockerfile)
