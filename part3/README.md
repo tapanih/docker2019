@@ -60,3 +60,7 @@ Original image was 976MB and the optimized version is 275MB.
 [Original Dockerfile](../part1/dockerfiles/exercise-15/Dockerfile)
 
 [Optimized Dockerfile](exercise-07/Dockerfile)
+
+## Exercise 3.8
+
+![Kubernetes diagram](exercise-08/kubernetes.png)
